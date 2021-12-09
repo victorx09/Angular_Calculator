@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class Toolbar {
   title = 'calculatorApp';
-  author = 'K Sai Nihal';
+  author = 'Namit Prakash';
 }
