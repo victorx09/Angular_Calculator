@@ -1,0 +1,22 @@
+<mat-card matTooltip="Card">
+
+    <div class="res-wrapper">
+        <input class="res-field" placeholder="0" />
+        <input class="inp-field" placeholder="0" />
+    </div>
+
+    <div class="row" *ngFor="let items of setList;let i=index;">
+        <div class="col">
+            <button matTooltip="Button" mat-fab *ngFor="let item of items;let j=index;" [id]="'btn' +i+j" (click)="getValue(item)">
+
+                <span *ngIf="item !== 'del'; then thenBlock; else elseBlock"></span>
+                <ng-template #thenBlock>{{item}}</ng-template>
+                <ng-template #elseBlock>
+                    <mat-icon>backspace</mat-icon>
+                </ng-template>
+
+            </button>
+        </div>
+    </div>
+
+</mat-card>
